@@ -108,9 +108,12 @@
         margin-bottom: 2rem;     
     }
 
+    .nav__logo:hover{
+        text-decoration: none;     
+    }
+
     .nav__logo-icon{
-        font-size:1.25rem;
-        color:var(--white-color);
+        width:6px;
     }
 
     .nav__logo-name{
@@ -127,11 +130,13 @@
     
     .nav__link:hover{
         color:var(--white-color); 
+        text-decoration: none;
     }
 
     .nav__icon{
         font-size: 1.25rem;
     }
+    
 
     /* Show navbar mobile */
     .show{
@@ -183,6 +188,11 @@
       
         .header__img img{
           width: 45px;
+        }
+
+        .header_toggle{
+            color:#ffffff;
+            font-size:18px;            
         }
       
         .l-navbar{
@@ -296,10 +306,76 @@
 }
 
 /* Hero Social Links */
-.social-links{
-   text-decoration: none; 
-}
-
 .social-links a{
-
+    font-family: "open sans",sans-serif;
+    font-size:20px;
+    color:#ffffff;
+    transition:all .5s ease-out;
 }
+
+.social-links a:hover{
+    font-family: "open sans",sans-serif;
+    color:var(--first-color-light);
+    text-decoration: none;
+}
+
+/* Hero Scroll indicators */
+.scroll-indicator p{
+    padding-right:0 !important;
+    position:absolute;
+    top:470px;
+    right:4%;
+}
+
+.scroll-link span{
+    transition: all .4s ease-in;
+    padding-left:0px
+}
+
+.scroll-link:hover span{
+    transition: all .4s ease-out;
+    padding-left:5px;
+}
+
+
+/* ==============================================
+                Slide animation
+============================================== */
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .slider {
+    background: #7478e6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    z-index: 1000;
+  }
+  
+  .intro-text {
+    color: rgb(233, 233, 233);
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+  }
+  
+  .hide {
+    background: black;
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
