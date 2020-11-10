@@ -31,16 +31,43 @@
         font-family: var(--body-font);
         font-size:var(--normal-font-size);
         transition:.5s;
+        cursor: none;
+    }
+
+    .body {
+      width:100%;
+      height:100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .body video{
+      position: absolute;
+      top:0;
+      left:0;
+      object-fit: cover;
+      width:100%;
+      height:100vh;
+      pointer-events: none;
+      z-index:-1;
     }
 
     a{
         text-decoration:none;
         font-family: "open sans",sans-serif;
+        cursor:none;
     }
     a:hover{
         text-decoration: none;
+        cursor:none;
     }
 
+    /* ==============================================
+               Navbar 
+============================================== */
     /* Header */
     .header{
         width: 100%;
@@ -60,7 +87,6 @@
     .header__toggle{
         color:var(--first-color);
         font-size: 1.5rem;
-        cursor:pointer;
     }
 
     .header__img{
@@ -149,13 +175,6 @@
         padding-left: calc(var(--nav-width) + 1rem);
     }
 
-    .body{
-        background-image: url(/assets/img/iphone2.png);
-        background-position:center;
-        background-repeat: no-repeat;
-        background-size:cover;
-    }
-
     /* Active links */
     .active{
         color:var(--white-color);
@@ -221,7 +240,6 @@
     margin-top: 60px;
     position: relative;
     overflow:hidden;
-    background-image:url(/assets/img/home1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
@@ -230,15 +248,16 @@
   
   #hero h1 {
     margin: 0 0 10px 0;
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 800;
     /* line-height: 56px; */
     color:#fafafa;
   }
 
   #hero p{
-      font-size:12px;
+      font-size:13px;
       font-weight:600;
+      margin-top:30px;
       padding-right: 85px;
       color:#fafafa;
   }
@@ -271,14 +290,18 @@
     font-family: "open sans",sans-serif;
     font-size:20px;
     font-weight:200;
+    margin-bottom: 20px;
     color:#ffffff;
     transition:all .5s ease-out;
+    cursor: none;
+    z-index:3;
 }
 
 .social-links a:hover{
     font-family: "open sans",sans-serif;
     color:var(--first-color-light);
     text-decoration: none;
+    cursor: none;
 }
 
 /* Hero Scroll indicators */
@@ -287,11 +310,14 @@
     position:absolute;
     top:470px;
     right:4%;
+    z-index:3;
+    cursor:none;
 }
 
 .scroll-link span{
     transition: all .4s ease-in;
-    padding-left:0px
+    padding-left:0px;
+    cursor:none;
 }
 
 .scroll-link:hover span{
@@ -304,7 +330,8 @@
                 Slide animation
 ============================================== */
 .intro {
-    background: black;
+    background: #384082;
+    background-image: url(https://res.cloudinary.com/starchypirate/image/upload/v1605007306/portfolio/Waihou_ogu1ql.png);
     position: fixed;
     top: 0;
     left: 0;
@@ -327,17 +354,43 @@
   }
   
   .intro-text {
-    color: rgb(233, 233, 233);
-    font-family: "Montserrat", sans-serif;
-    font-size: 3rem;
+    color: rgb(255, 255, 255);
   }
   
   .hide {
-    background: black;
+    background: #2a355300;
     overflow: hidden;
   }
   
   .hide span {
     transform: translateY(100%);
     display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight:700;
   }
+
+  /* ==============================================
+                Cursor animation
+============================================== */
+.cursor{
+  width:2rem;
+  height:2rem;
+  border:2px solid rgb(55, 55, 55);
+  border-radius: 50%;
+  position:absolute;
+  transform:translate(-50%, -50%);
+  pointer-events: none;
+  transition:all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index:1;
+}
+
+.link-grow{
+  transform:scale(2);
+  background:rgb(55, 55, 55);
+}
+.hovered-link{
+  color:white;
+}
