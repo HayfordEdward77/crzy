@@ -5,7 +5,7 @@
 
     /* Colors */
     --first-color: #7276e100;
-    --first-color-light: #AFA5D9;
+    --first-color-light: #bbbbbb;
     --white-color: #F7F6FB;
     
     /* font and typography */
@@ -25,26 +25,22 @@
     }
 
     body{
-        position:relative;
+        position: relative;
         margin:var(--header-height) 0 0 0;
         padding:0 1rem;
         font-family: var(--body-font);
         font-size:var(--normal-font-size);
-        transition:.5s;
+        transition:.5s;      
         cursor: none;
+        width:100%;
     }
 
-    .body {
-      width:100%;
-      height:100vh;
+    section{
+      padding:60px 0;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-
-    .body video{
+    .intro-vid{
       position: absolute;
       top:0;
       left:0;
@@ -52,7 +48,8 @@
       width:100%;
       height:100vh;
       pointer-events: none;
-      z-index:-1;
+      z-index:-2;
+
     }
 
     a{
@@ -162,6 +159,20 @@
 
     .nav__icon{
         font-size: 1.25rem;
+        mix-blend-mode: difference;
+    }
+
+    .header__link{
+      position:relative;
+      color:var(--first-color-light);
+      text-decoration:none;
+      transition:.3s;
+    }
+    
+    .header__link:hover{
+      color:var(--white-color);
+      text-decoration:none;
+      transition:.3s;
     }
     
 
@@ -231,25 +242,26 @@
         }
       }
 
+
       /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
     /* height: 70vh; */
-    margin-top: 60px;
     position: relative;
     overflow:hidden;
     background-repeat: no-repeat;
     background-size: cover;
     background-position:center;
-    
+    z-index: 1;
   }
   
   #hero h1 {
     margin: 0 0 10px 0;
     font-size: 90px;
     font-weight: 800;
+    font-family: "Montserrat",sans-serif;
     /* line-height: 56px; */
     color:#fafafa;
   }
@@ -266,7 +278,7 @@
   @media (min-width: 1024px) {
     #hero {
       background-attachment: fixed;
-      height:80vh;
+      height:100vh;
     }
   }
   
@@ -275,9 +287,6 @@
       height: 100vh;
     }
   @media (max-width: 768px) {
-    #hero {
-      margin-top: 20px;
-    }
     #hero h1 {
       font-size: 28px;
       line-height: 36px;
@@ -287,42 +296,64 @@
 
 /* Hero Social Links */
 .social-links a{
-    font-family: "open sans",sans-serif;
     font-size:20px;
     font-weight:200;
     margin-bottom: 20px;
     color:#ffffff;
-    transition:all .5s ease-out;
-    cursor: none;
-    z-index:3;
+    z-index: 3;
 }
+
 
 .social-links a:hover{
     font-family: "open sans",sans-serif;
     color:var(--first-color-light);
     text-decoration: none;
     cursor: none;
+    z-index: 3;
 }
 
 /* Hero Scroll indicators */
-.scroll-indicator p{
+.scroll-indicator a{
     padding-right:0 !important;
     position:absolute;
     top:470px;
-    right:4%;
+    left:500px;
     z-index:3;
     cursor:none;
 }
 
-.scroll-link span{
-    transition: all .4s ease-in;
-    padding-left:0px;
-    cursor:none;
+.scroll-links{
+  z-index: 3;
+  font-size:35px;
+  transition: all 0.5s ease-out;
 }
 
-.scroll-link:hover span{
-    transition: all .4s ease-out;
-    padding-left:5px;
+.scroll-links:hover{
+  transform:scale(1.3);
+  z-index: 3;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+
+
+/* ==============================================
+                Horizontal Skroll animation
+============================================== */
+.content{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  display: flex;
+}
+
+.content section{
+    min-width: 100%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
 }
 
 
@@ -374,23 +405,272 @@
                 Cursor animation
 ============================================== */
 .cursor{
-  width:2rem;
-  height:2rem;
-  border:2px solid rgb(55, 55, 55);
+  width:2.5rem;
+  height:2.5rem;
+  border:3px solid rgb(5, 5, 5);
   border-radius: 50%;
   position:absolute;
   transform:translate(-50%, -50%);
   pointer-events: none;
   transition:all 0.3s ease;
   transition-property: background, transform;
-  transform-origin: 100% 100%;
+  transform-origin: 80% 80%;
   z-index:1;
 }
 
 .link-grow{
-  transform:scale(2);
-  background:rgb(55, 55, 55);
+  transform:scale(3);
+  background:rgba(55, 55, 55, 0.111);
+  border:none;
 }
 .hovered-link{
   color:white;
 }
+
+
+/* ----------------------------------------------------
+Quote section
+---------------------------------------------------- */
+#quote {
+  width: 100%;
+  position: relative;
+  overflow:hidden;
+  background-color: #111111;
+  
+}
+
+#quote h1 {
+  margin: 0 0 10px 0;
+  font-size: 90px;
+  font-weight: 800;
+  /* line-height: 56px; */
+  color:#fafafa;
+}
+
+#quote p{
+    font-size:13px;
+    font-weight:600;
+    margin-top:30px;
+    padding-right: 85px;
+    color:#fafafa;
+}
+ 
+
+@media (min-width: 1024px) {
+  #quote {
+    background-attachment: fixed;
+    height:100vh;
+  }
+}
+
+@media (max-width: 991px) {
+  #quote {
+    height: 100vh;
+  }
+  #quote h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* ----------------------------------------------------
+Services section
+---------------------------------------------------- */
+#Services {
+  width: 100%;
+  position: relative;
+  overflow:hidden;
+  background-color: #111111;
+  
+}
+
+#Services h1 {
+  margin: 0 0 10px 0;
+  font-size: 90px;
+  font-weight: 800;
+  /* line-height: 56px; */
+  color:#fafafa;
+  font-family: "montserrat",sans-serif;
+}
+
+#Services p{
+    font-size:13px;
+    font-weight:600;
+    margin-top:30px;
+    padding-right: 85px;
+    color:#fafafa;
+}
+ 
+
+@media (min-width: 1024px) {
+  #Services {
+    background-attachment: fixed;
+    height:100vh;
+  }
+}
+
+@media (max-width: 991px) {
+  #Services {
+    height: 100vh;
+  }
+  #Services h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* ----------------------------------------------------
+Contact section
+---------------------------------------------------- */
+#Contact {
+  width: 100%;
+  position: relative;
+  overflow:hidden;
+  background-color: #F2EFF2;
+  
+}
+
+#Contact .form-side h1 {
+  margin: 0 0 10px 0;
+  font-size: 90px;
+  font-weight: 800;
+  /* line-height: 56px; */
+  color:#202020;
+  font-family: "montserrat",sans-serif;
+}
+
+#Contact .form-side h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 400;
+  /* line-height: 56px; */
+  color:#202020;
+  font-family: "montserrat",sans-serif;
+}
+
+#Contact .form-side p{
+    font-size:12px;
+    font-weight:500;
+    color:#202020;
+    font-family: "montserrat",sans-serif;
+}
+ 
+
+@media (min-width: 1024px) {
+  #Contact {
+    background-attachment: fixed;
+    height:100vh;
+  }
+}
+
+@media (max-width: 991px) {
+  #Contact {
+    height: 100vh;
+  }
+  #Contact .form-side h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+  /* ==============================================
+                Form style
+============================================== */
+.form{
+  box-shadow:  14px 14px 28px #e6e6e6, 
+             -14px -14px 28px #ffffff;
+            }
+
+.form-input{
+  border:0px solid;
+  transition: 0.3s all ease-in;
+}
+
+.form-input:hover{
+  border-bottom:3px solid #ff7f11;
+  transition: 0.3s all ease-out;
+}
+
+.form-control{
+  border:0px solid !important;
+}
+
+.contact-btn p{
+  background-color:#ffffff;
+  border-radius:0px;
+  font-family: "montserrat",sans-serif;
+  font-size:8px;
+  font-weight:700;
+  margin:0;
+  padding:15px;
+  cursor:none;
+  transition:all 0.3s ease;
+}
+
+.contact-btn p:hover{
+  background-color:#ffffff;
+  border-radius:0px;
+  font-family: "montserrat",sans-serif;
+  font-size:8px;
+  font-weight:700;
+  margin:0;
+  padding:15px;
+  cursor:none;
+  box-shadow:  14px 14px 28px #e6e6e6, 
+  -14px -14px 28px #ffffff;
+  transition:all 0.3s ease;
+}
+
+  /* ==============================================
+                Footer style
+============================================== */
+
+.footer p{
+  color:#ffffff;
+  font-family: "montserrat",sans-serif;
+  font-weight:700;
+  font-size:20px;
+  position: relative;
+  display:inline-block;
+}
+
+.footer p::after{
+  content:'';
+  display:block;
+  width:70%;
+  height:2px;
+  background:#7478e6;
+  position:absolute;
+  bottom:10%;
+  z-index:1;
+}
+
+
+.footer ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer a{
+  color:#ffffff;
+  text-decoration: none;
+  font-family: "montserrat",sans-serif;
+  font-size:13px;
+}
+
+.footer a:hover{
+  color:#7478e6;
+  text-decoration: none;
+  font-family: "montserrat",sans-serif;
+  font-size:13px;
+}
+
+.footer li{
+  margin-bottom:15px;
+}
+
+
+
+
+
+
