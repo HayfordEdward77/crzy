@@ -361,8 +361,7 @@
                 Slide animation
 ============================================== */
 .intro {
-    background: #384082;
-    background-image: url(https://res.cloudinary.com/starchypirate/image/upload/v1605007306/portfolio/Waihou_ogu1ql.png);
+    background:#202020;
     position: fixed;
     top: 0;
     left: 0;
@@ -385,7 +384,7 @@
   }
   
   .intro-text {
-    color: rgb(255, 255, 255);
+    color: #fafafa;
   }
   
   .hide {
@@ -426,6 +425,14 @@
 .hovered-link{
   color:white;
 }
+
+
+
+
+
+
+
+
 
 
 /* ----------------------------------------------------
@@ -473,6 +480,13 @@ Quote section
   }
 }
 
+
+
+
+
+
+
+
 /* ----------------------------------------------------
 Services section
 ---------------------------------------------------- */
@@ -480,16 +494,22 @@ Services section
   width: 100%;
   position: relative;
   overflow:hidden;
-  background-color: #111111;
-  
+  background-image: url(/assets/img/services/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: rgb(235,230,230);
+  background: linear-gradient(312deg, rgba(235,230,230,1) 0%, rgba(255,255,255,1) 100%); */
+
 }
+
 
 #Services h1 {
   margin: 0 0 10px 0;
   font-size: 90px;
   font-weight: 800;
   /* line-height: 56px; */
-  color:#fafafa;
+  color:#16213e;
   font-family: "montserrat",sans-serif;
 }
 
@@ -498,13 +518,13 @@ Services section
     font-weight:600;
     margin-top:30px;
     padding-right: 85px;
-    color:#fafafa;
+    color:#16213e;
 }
  
 
 @media (min-width: 1024px) {
   #Services {
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height:100vh;
   }
 }
@@ -518,6 +538,156 @@ Services section
     line-height: 36px;
   }
 }
+/* ==============================================
+                3d card animation
+============================================== */
+.service-cards  {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width:1200px;
+  transform-style:preserve-3d;
+}
+
+
+.service-cards .box{
+  position: relative;
+  width:190px;
+  height:250px;
+  margin:10px;
+  background: #ffffff;
+  border-radius:10px;
+  transform-style:preserve-3d;
+  box-shadow:  11px 11px 43px #e6e6e6, 
+             -11px -11px 43px #ffffff;
+}
+
+.service-cards .box::before{
+  content:'WHAT';
+  position: absolute;
+  top:10px;
+  left:10px;
+  font-family: "montserrat",sans-serif;
+  font-size:3em;
+  font-weight:900;
+  color:#202020;
+  font-style:italic;
+  opacity:0;
+  transition: 0.5s;
+}
+
+.service-cards .box::after{
+  content:'WE DO';
+  position: absolute;
+  font-family: "montserrat",sans-serif;
+  bottom:20px;
+  right:35px;
+  font-size:2em;
+  font-weight:900;
+  color:#202020;
+  font-style:italic;
+  opacity:0;
+  transition: 0.5s;
+}
+
+.service-cards .box:hover::before,
+.service-cards .box:hover::after
+{
+  opacity:0.04;
+}
+
+.service-cards .box .name{
+  position: absolute;
+  top:0;
+  left:0;
+  text-align:center;
+  color:#0f3460;
+  width:100%;
+  font-family: "montserrat",sans-serif;
+  font-size:18px;
+  font-weight:750;
+  transform-style: preserve-3d;
+  transform:translate3d(0,0,75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 10;
+}
+
+.service-cards .box:hover .name{
+  top:30px;
+  opacity:1;
+
+}
+
+.service-cards .box .learn{
+  position: absolute;
+  bottom: 0;
+  left:60px;
+  transform-style: preserve-3d;
+  transform:translate3d(-5%,0,75px);
+  color:#132743;
+  /* background: #333;
+  padding:10px 25px;
+  border-radius:0px; */
+  text-decoration: none;
+  transition: 0.5s;
+  opacity:0;
+  font-family: "montserrat",sans-serif;
+  font-size:12px;
+  font-weight:600;
+  z-index:10;
+}
+
+.service-cards .box:hover .learn{
+  bottom:20px;
+  opacity:1;
+}
+
+.service-cards .box .circle{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: rgb(163,216,244);
+  background: linear-gradient(0deg, rgba(163,216,244,1) 0%, rgba(117,121,231,1) 100%);
+  transform-style: preserve-3d;
+  z-index:10;
+  opacity:1;
+  transform:translate3d(-50%,-50%,50px);
+}
+.service-cards .box .service-img{
+  position: absolute;
+  top:50%;
+  left:50%;
+  max-width:195px;
+  transition:0.5s;
+  z-index:11;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform:translate3d(-50%,-50%,50px)rotate(-15deg);
+
+}
+
+.service-cards .box:hover .service-img{
+  transform:translate3d(-50%,-50%,100px)rotate(-15deg);
+}
+
+/* 
+.service-cards .box:nth-child(1) .circle,
+.service-cards .box:nth-child(1) .learn{
+    background:#379bf7;
+} */
+
+
+
+
+
+
 
 /* ----------------------------------------------------
 Contact section
