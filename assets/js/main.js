@@ -71,6 +71,19 @@ navLinks.forEach(link =>{
     });
 });
 
+
+
+// ==============================================================
+//                          Video Delay
+// ==============================================================
+var video = document.getElementById("video_background");
+video.addEventListener("canplay", function() {
+setTimeout(function() {
+    video.play();
+}, 1000);
+});
+
+
 // quote.forEach(Text => {
 //     Text.addEventListener("mouseleave", () => {
 //         mouseCursor.classList.remove("invertcur");
