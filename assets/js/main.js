@@ -21,19 +21,19 @@ const showNavbar =(toggleId, navId, bodyId, headerId) =>{
 
 }
 
-showNavbar('header-toggle','nav-bar','body-pd', 'header')
+showNavbar('header-toggle','nav-bar','body-pd', 'header');
 
 // Link active
-const linkColor = document.querySelectorAll('.nav__link')
+const linkColor = document.querySelectorAll('.nav__link');
 
 function colorLink(){
     if(linkColor){
         linkColor.forEach (l => l.classList.remove('active'))
         this.classList.add('active')
     }
-}
+};
 
-linkColor.forEach( l => l.addEventListener('click',colorLink))
+linkColor.forEach( l => l.addEventListener('click',colorLink));
 
 
 // ==============================================================
@@ -51,6 +51,7 @@ tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 // ==============================================================
 let mouseCursor = document.querySelector('.cursor');
 let navLinks = document.querySelectorAll('a');
+let quote = document.querySelectorAll('.quotes');
 
 window.addEventListener("mousemove",cursor);
 
@@ -69,3 +70,20 @@ navLinks.forEach(link =>{
         link.classList.add("hovered-link");
     });
 });
+
+// quote.forEach(Text => {
+//     Text.addEventListener("mouseleave", () => {
+//         mouseCursor.classList.remove("invertcur");
+//     });
+//     Text.addEventListener("mouseover", () => {
+//         mouseCursor.classList.add("invertcur");
+//     });
+// });
+
+
+
+
+
+
+
+
