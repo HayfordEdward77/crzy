@@ -77,10 +77,10 @@ navLinks.forEach(link =>{
 //                          Video Delay
 // ==============================================================
 var video = document.getElementById("video_background");
-video.addEventListener("canplay", function() {
+video.addEventListener("canplaythrough", function() {
 setTimeout(function() {
     video.play();
-}, 1000);
+}, 2000);
 });
 
 
