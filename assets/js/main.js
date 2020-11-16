@@ -39,11 +39,11 @@ linkColor.forEach( l => l.addEventListener('click',colorLink));
 // ==============================================================
 //                          Slide Animation
 // ==============================================================
-const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+// const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 
-tl.to(".text", { y: "0%", duration: 1, stagger: 0.5 });
-tl.to(".slider", { y: "-100%", duration: 1.3, delay: 0.5 });
-tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
+// tl.to(".text", { y: "0%", duration: 1, stagger: 0.5 });
+// tl.to(".slider", { y: "-100%", duration: 1.3, delay: 0.5 });
+// tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
 
 
 // ==============================================================
@@ -80,7 +80,7 @@ var video = document.getElementById("video_background");
 video.addEventListener("canplaythrough", function() {
 setTimeout(function() {
     video.play();
-}, 2000);
+}, 500);
 });
 
 
