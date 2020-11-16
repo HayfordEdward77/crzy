@@ -362,6 +362,16 @@
     height:100vh;
 }
 
+@media (max-width:991px){
+  .content{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      height:100vh;
+      transform: none !important;
+  }
+}
+
 
 /* ==============================================
                 Slide animation
