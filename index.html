@@ -10,7 +10,7 @@
     <link rel="icon" href="">
 
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -79,13 +79,13 @@
             <!-- ======= Hero Section ======= -->
             <section id="hero" style="margin-top: 0%;"class="d-flex align-items-center">
 
-                <div class="container">
+                <div class="container" data-aos="fade-up">
                 <div class="row">
                     <div class="col-lg-6 pl-5 pt-5 pt-lg-0 d-flex flex-column justify-content-center">
-                    <h1>
+                    <h1 data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
                         BUILD<br>YOUR<br>DREAM.
                         </h1>
-                        <p>
+                        <p data-aos="fade-right" data-aos-delay="500">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ratione mollitia accusantium! Laboriosam similique eius fuga reiciendis.
                         </p>
                     </div>
@@ -93,7 +93,7 @@
                         <div class="row">
                             <div class="col-11"></div>
                             <div class="col-1 d-none d-md-none d-lg-block">
-                                <div class="social-links d-flex flex-column">
+                                <div class="social-links d-flex flex-column" data-aos="fade-left" data-aos-delay="400">
                                     <a href="#"><i class="ri-github-line"></i></a>
                                     <a href="#"><i class="ri-instagram-line"></i></a>
                                     <a href="#"><i class="ri-twitter-line"></i></a>
@@ -130,7 +130,7 @@
                 <img src="assets/img/team/12.png" alt="" data-speed="3" class="layer">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-md-6">
                             <h1>
                                 A Team Of Two
                             </h1>
@@ -152,7 +152,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5">
-                            <h1>What<br>We Do</h1>
+                            <h1>What We Do</h1>
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est doloribus quasi placeat unde consequatur deserunt obcaecati exercitationem cum error fugiat, voluptas laborum.</p>
                         </div>
                         <div class="col-lg-7 service-cards">
@@ -275,34 +275,49 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 form-side">
-                            <div class="row">
+                            <div class="row d-flex justify-content-center">
                                 <h3>
                                     Let's meet in Accra or chat with us online to discuss your next big project.
                                 </h3>
                                 <h1>
-                                    contacts
+                                    contacts.
                                 </h1>
+
+                                <table class="d-flex justify-content-center">
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                Mail us
+                                            </p>    
+                                        </td>
+                                        <td>
+                                           <p>
+                                            Call us
+                                           </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <b>
+                                                    testingadwoa@gmail.com
+                                                </b>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                <b>
+                                                    +233 055 755 3290
+                                                </b>
+                                               
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
-                            <div class="row">
-                                <div class="col-6">
-                                    <p>
-                                        Mail us
-                                    </p>
-                                    <p style="font-size: 12px;font-weight: 600;">
-                                        testingadwoa@gmail.com
-                                    </p>
-                                </div>
-                                <div class="col-6">
-                                    <p>
-                                        Call us
-                                    </p>
-                                    <p style="font-size: 15px;font-weight: 600;">
-                                        +233 055 755 3290
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <form id="my-form" class="php-email-form mt-4" name=contact data-netlify="true" data-netlify-recaptcha="true" action="#" method="POST" role="form" >
+
+                            <div class="row d-flex justify-content-center">
+                                <form id="my-form" class="php-email-form mt-4 p-2" name=contact data-netlify="true" data-netlify-recaptcha="true" action="#" method="POST" role="form" >
                                     <div class="form-row">
                                       <div class="col-md-6 form-group form">
                                         <input type="text" name="name" class="form-control form-input" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -329,29 +344,58 @@
 
                         <div class="col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #202020;">
                             <div class="row footer">
-                                <div class="col-lg-4 p-4">
-                                    <p>INDEX</p>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">About</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-4 p-4">
-                                    <p>CONTACT</p>
-                                    <ul>
-                                        <li><a href="#">st@gmail.com</a></li>
-                                        <li><a href="#">0557553290</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-4 p-4">
-                                    <p>CONNECT</p>
-                                    <ul>
-                                        <li><a href="#">Instagram <span><i class="ri-arrow-right-up-line"></i></span></a></li>
-                                        <li><a href="#">Github <span><i class="ri-arrow-right-up-line"></i></span></a></li>
-                                        <li><a href="#">Twitter <span><i class="ri-arrow-right-up-line"></i></span></a></li>
-                                    </ul>
-                                </div>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                INDEX
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                CONTACT
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>
+                                                CONNECT
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <li><a href="#">Home</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">About</a></li>
+                                        </td>
+                                        <td>
+                                            <li><a href="#">testingadwoa@gmail.com</a></li>
+                                            <li><a href="#">0557553290</a></li>
+                                        </td>
+                                        <td>
+                                            <li><a href="#">Instagram <span><i class="ri-arrow-right-up-line"></i></span></a></li>
+                                            <li><a href="#">Github <span><i class="ri-arrow-right-up-line"></i></span></li>
+                                            <li><a href="#">Twitter <span><i class="ri-arrow-right-up-line"></i></span></a></li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>
+                                                C 2020
+                                            </h4>
+                                        </td>
+                                        <td>
+                                            <h4>
+                                                All rights reserved
+                                            </h4>
+                                        </td>
+                                        <td>
+                                            <h4>
+                                                Designed by StarchyTeam with heart
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -391,6 +435,12 @@
    
     <!-- aos animation -->
     <script src="assets/vendor/aos/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
+    </script>
 
     <!-- Skrollr Animation -->
     <script type="text/javascript" src="assets/js/skrollr.js"></script>

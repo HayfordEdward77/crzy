@@ -80,7 +80,7 @@ var video = document.getElementById("video_background");
 video.addEventListener("canplaythrough", function() {
 setTimeout(function() {
     video.play();
-}, 500);
+}, 0);
 });
 
 

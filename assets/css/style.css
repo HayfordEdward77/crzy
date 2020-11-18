@@ -9,7 +9,7 @@
     --white-color: #F7F6FB;
     
     /* font and typography */
-    --body-font: 'open sans', sans-serif;
+    --body-font: 'montserrat', sans-serif;
     --normal-font-size:1rem;
 
     /* Z index */
@@ -38,7 +38,7 @@
     }
 
     section{
-      padding:60px 0;
+      padding:60px 15px;
       overflow: hidden;
     }
 
@@ -273,7 +273,7 @@
   }
 
   #hero p{
-      font-size:13px;
+      font-size:15px;
       font-weight:600;
       margin-top:30px;
       padding-right: 85px;
@@ -294,7 +294,7 @@
     }
   @media (max-width: 768px) {
     #hero h1 {
-      font-size: 28px;
+      font-size: 35px;
       line-height: 36px;
     }
   }
@@ -367,7 +367,7 @@
       position: absolute;
       display: flex;
       flex-direction: column;
-      height:100vh;
+      height:auto;
       transform: none !important;
   }
 }
@@ -497,6 +497,7 @@ Quote section
     font-size:13px;
     font-weight:600;
     color:#fafafa;
+    font-family: "montserrat",sans-serif;
 }
  
 
@@ -508,11 +509,15 @@ Quote section
 
 @media (max-width: 991px) {
   #team {
-    height: 100vh;
+    height: auto;
   }
   #team h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
+    text-align: center;
+  }
+  #team img{
+    display: none;
   }
 }
 
@@ -555,6 +560,7 @@ Services section
     margin-top:30px;
     padding-right: 85px;
     color:#16213e;
+    font-family: "montserrat",sans-serif;
 }
  
 
@@ -567,11 +573,17 @@ Services section
 
 @media (max-width: 991px) {
   #Services {
-    height: 100vh;
+    height: auto;
   }
   #Services h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
+    text-align: center;
+  }
+
+  #Services p{
+    text-align: center;
+    padding-right: 0px;
   }
 }
 /* ==============================================
@@ -719,7 +731,60 @@ Services section
     background:#379bf7;
 } */
 
+@media (max-width: 991px) {
+  .service-cards .box{
+    width:150px;
+    height:200px;
+    margin:20px;
+  }
+  .service-cards .box .circle{
+    top:50%;
+    left:50%;
+    width:80px;
+    height:80px;
+  }
 
+  .service-cards .box .service-img{
+    top:50%;
+    left:48%;
+    max-width:150px;
+  }
+
+  .service-cards .box .name{
+    width:100%;
+    font-family: "montserrat",sans-serif;
+    font-size:15px;
+    font-weight:600;
+  }
+
+  .service-cards .box .learn{
+    bottom: 0;
+    left:40px;
+    font-size:14px;
+    font-weight:600;
+  }
+
+  .service-cards .box::before{
+    top:10px;
+    left:25px;
+    font-size:28px;
+    font-weight:900;
+  }
+  
+  .service-cards .box::after{
+    bottom:8px;
+    right:25px;
+    font-size:28px;
+    font-weight:900;
+  }
+
+  #Services p{
+    font-size:15px;
+    font-weight:600;
+    margin-top:30px;
+  }
+ 
+}
 
 
 
@@ -749,16 +814,17 @@ Testimonial section
 }
 
 #testimonial p{
-    font-size:13px;
+    font-size:15px;
     font-weight:600;
     color:#fafafa;
+    text-align: center;
 }
  
 
 @media (min-width: 1024px) {
   #testimonial {
     /* background-attachment: fixed; */
-    height:100vh;
+    height:auto;
   }
 }
 
@@ -767,7 +833,7 @@ Testimonial section
     height: 100vh;
   }
   #testimonial h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
   }
 }
@@ -780,7 +846,7 @@ Testimonial section
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 400px;
   width: 850px;
   border-radius: 2px;
   border:none;
@@ -867,6 +933,39 @@ Testimonial section
   font-family: "montserrat",sans-serif;
 }
 
+@media (max-width: 991px) {
+  .wrapper .testi .client .profile{
+    display:block;
+    height: 85px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper .testi .client .profile .info h3{
+    font-size: 10px;
+    font-weight:700;
+    margin:4px 0px;
+  }
+  
+  .wrapper .testi .client .profile .info small{
+    color:#bdbdbd;
+    font-size:9px;
+    font-family: "montserrat",sans-serif;
+    line-height: 0px;
+  }
+
+  .wrapper .testi .client .say .border{
+    top:25px;
+    width:60%;
+  }
+
+  .wrapper .testi .client .profile .img img{
+    margin: 3px 0px;
+  }
+  
+}
+
+
 
 
 
@@ -879,7 +978,6 @@ Contact section
 #Contact {
   width: 100%;
   position: relative;
-  overflow:hidden;
   background-color: #F2EFF2;
   
 }
@@ -903,7 +1001,7 @@ Contact section
 }
 
 #Contact .form-side p{
-    font-size:10px;
+    font-size:0.8rem;
     font-weight:500;
     color:#202020;
     font-family: "montserrat",sans-serif;
@@ -919,11 +1017,18 @@ Contact section
 
 @media (max-width: 991px) {
   #Contact {
-    height: 100vh;
+    height: auto;
   }
   #Contact .form-side h1 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 36px;
+    text-align: center;
+    padding:10px 0px;
+  }
+
+  #Contact .form-side h3{
+    font-size:15px;
+    text-align: center;
   }
 }
   /* ==============================================
@@ -999,7 +1104,7 @@ Contact section
 }
 
 
-.footer ul{
+.footer li{
   list-style-type: none;
   margin: 0;
   padding: 0;
