@@ -273,11 +273,12 @@
   }
 
   #hero p{
-      font-size:15px;
-      font-weight:600;
-      margin-top:30px;
+      font-size:13px;
+      font-weight:450;
+      margin-top:10px;
       padding-right: 85px;
       color:#fafafa;
+      font-family: "Montserrat",sans-serif;
   }
    
   
